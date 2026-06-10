@@ -1,0 +1,16 @@
+Act as an expert C programming lecturer. Design and implement a complete, modular, and menu-driven 2D Graphics Editor in C. 
+
+The program must adhere strictly to the following technical architecture and requirements:
+
+1. Canvas Storage: Use a global 2D character array of fixed bounds (e.g., 20 rows by 40 columns) to store and manage the drawing canvas.
+2. Canvas Initialization: Write a dedicated function to initialize the canvas, filling every coordinate with an underscore character ('_').
+3. Geometric Drawing Functions: Write separate logic functions to plot the boundary paths of the following shapes onto the 2D array using the asterisk character ('*') as the pen brush:
+   - Line: Implement standard discrete path-plotting logic (such as Bresenham's or a digital differential step approach) to connect two coordinate points safely within array bounds.
+   - Rectangle: Given a top-left starting coordinate alongside a specified height and width, plot the outer frame borders.
+   - Triangle: Draw straight lines connecting three unique vertex coordinates.
+   - Circle: Plot an approximate bounding circumference path given a center point coordinate and a designated radius.
+4. Canvas Manipulation: The interactive interface must facilitate adding new elements cumulatively to the active matrix without automatically erasing existing paths, alongside an explicit "Delete/Clear Canvas" function to wipe the matrix clean back to default underscores.
+5. Display System: Write a clean display matrix function that sequentially prints out rows and columns of characters to the standard console screen output cleanly.
+6. User Control: Wrap the ecosystem inside a robust 'while' loop featuring a clear, interactive numerical command selection menu to switch cleanly between display, insertion, deletion, and exit configurations. Keep the environment standard console-compatible without strictly forcing external ncurses UI wrappers unless requested.
+
+Deliver clean, production-grade, well-commented C source code that handles basic out-of-bounds coordinate checks.
